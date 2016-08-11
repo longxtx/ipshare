@@ -1,7 +1,8 @@
-# Java Getting started
+# ShareData 
 
 一个简单的使用 Servlet 的 Java 服务端应用，打成 war 包运行。
 可以运行在 LeanEngine Java 运行时环境。
+初步设定主要为基于nodejs的前端提供业务和数据持久化处理服务
 
 ## 一键部署
 [![Deploy to LeanEngine](http://ac-32vx10b9.clouddn.com/109bd02ee9f5875a.png)](https://leancloud.cn/1.1/functions/_ops/deploy-button)
@@ -11,8 +12,8 @@
 首先确认本机已经安装 [LeanCloud 命令行工具](https://www.leancloud.cn/docs/leanengine_cli.html)，然后执行下列指令：
 
 ```
-$ git clone https://github.com/leancloud/java-war-getting-started.git
-$ cd java-war-getting-started
+$ git clone https://github.com/longxtx/sharedata.git
+$ cd sharedata
 ```
 
 安装依赖：
@@ -49,10 +50,7 @@ lean deploy
 lean publish
 ```
 
-## 相关文档
 
-* [云引擎服务总览](https://leancloud.cn/docs/leanengine_overview.html)
-* [网站托管开发指南](https://leancloud.cn/docs/leanengine_webhosting_guide-java.html)
-* [云函数开发指南](https://leancloud.cn/docs/leanengine_cloudfunction_guide-java.html)
-* [数据存储开发指南](https://leancloud.cn/docs/leanstorage_guide-java.html)
-* [命令行工具使用详解](https://leancloud.cn/docs/leanengine_cli.html)
+## 相关文档
+龙行2016
+

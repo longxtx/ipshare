@@ -2,6 +2,7 @@
 
 一个简单的使用 Express 4 的 Node.js 应用。
 可以运行在 LeanEngine Node.js 运行时环境。
+配合基于java的业务逻辑及数据持久化处理的sharedata环境，实现一个简单的商城，主要用于验证框架及基础开发环境
 
 ## 一键部署
 [![Deploy to LeanEngine](http://ac-32vx10b9.clouddn.com/109bd02ee9f5875a.png)](https://leancloud.cn/1.1/functions/_ops/deploy-button)
@@ -11,7 +12,7 @@
 首先确认本机已经安装 [Node.js](http://nodejs.org/) 运行环境和 [LeanCloud 命令行工具](https://www.leancloud.cn/docs/leanengine_cli.html)，然后执行下列指令：
 
 ```
-$ git clone git@github.com:leancloud/node-js-getting-started.git
+$ git clone git@github.com:longxtx/ipshare.git
 $ cd node-js-getting-started
 ```
 
@@ -50,9 +51,5 @@ lean publish
 ```
 
 ## 相关文档
+龙行2016
 
-* [LeanEngine 指南](https://leancloud.cn/docs/leanengine_guide-node.html)
-* [JavaScript 指南](https://leancloud.cn/docs/js_guide.html)
-* [JavaScript SDK API](https://leancloud.cn/api-docs/javascript/index.html)
-* [命令行工具详解](https://leancloud.cn/docs/cloud_code_commandline.html)
-* [LeanEngine FAQ](https://leancloud.cn/docs/cloud_code_faq.html)
