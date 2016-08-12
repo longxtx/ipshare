@@ -5,13 +5,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var wechat = require('./routes/wechatBot');
+var mall = require('./routes/mall');
+var api = require('./routes/api');
 var cloud = require('./cloud');
-
+var ejs = require('ejs');
 var app = express();
 
 // 设置 view 引擎
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.engine('zt',ejs.__express);
+app.set('view engine', 'zt');
 app.use(express.static('public'));
 
 // 加载云代码方法
@@ -46,14 +49,14 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  res.render('index', {
-    currentTime: new Date(),
-    myname:'longxing'
-  });
+  res.redirect('/mall/index');
 });
+
 
 // 可以将一类的路由单独保存在一个文件中
 app.use('/wechat', wechat);
+app.use('/api', api);
+app.use('/mall', mall);
 
 // 如果任何路由都没匹配到，则认为 404
 // 生成一个异常让后面的 err handler 捕获

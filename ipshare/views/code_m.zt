@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>注册</title>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/base_m.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body>
+	<%- include head_m.zt %>
+
+	<div class="codemain">
+		<div class="wrap">
+			<h3>使用优先购买码</h3>
+			<div class="codemain_in">
+				<div class="cdform">
+					<div class="cdcode">
+						<strong>优先购买码</strong>
+						<p>Priority purchase code</p>
+						<span>有限期2015年07月28日</span>
+					</div>
+					<div class="cdinput">
+						<span class="input_code"><input type="text" value="" placeholder="请输入优先购买码"></span>
+						<span class="input_yzm"><input type="text" value="" placeholder="请输入验证码"><img src="/del/yzm.jpg"></span>
+						<input type="submit" value="验证" class="cdbtn">
+					</div>
+				</div>
+				<div class="cdtext">
+					<div class="cdt_top">
+						<p>为了充分保障您的权益，请在使用优先购买码前了解以下内容：<br>
+1. 如您遇到优先购买码无法识别的情况，请及时致电客服：400-619-0909；<br>
+2. 凭优先购买码购机的用户，需要一次性全款支付手机款项；<br>
+3. 优先购买码不能重复使用，全款支付成功后，该码立即失效；<br>
+4. 凭优先购买码购机的用户在取消订单或退货时，将退还您实际支付的金额；<br>
+5. 优先购买码非实名认证，请妥善保管，我们对人为原因造成的损失不承担任何责任。</p>
+					</div>
+					<div class="cdt_bt">
+						<p>常见问题：</p>
+						<ul>
+							<li><em>问：</em><span>一个优先购买码能使用几次？</span></li>
+							<li><em>答：</em><span>一个优先购买码只能使用一次。</span></li>
+							<li><em>问：</em><span>使用优先购买码下单后，如取消订单，优先购买码能否继续使用？</span></li>
+							<li><em>答：</em><span>如您已支付成功，则优先购买码不能再次使用；如果订单未支付，订单关闭后该优先
+							购买码可恢复使用。</span></li>
+							<li><em>问：</em><span>使用优先购买码购买手机，订单是否需要一次性支付全款？</span></li>
+							<li><em>答：</em><span>使用优先购买码购买手机时，必须一次性支付全款。</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<%- include foot_m.zt %>
+</body>
+</html>

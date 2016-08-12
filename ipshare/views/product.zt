@@ -1,0 +1,900 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>首页</title>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+
+<style>
+    .page-nuts {
+        position: relative;
+        width: 100%;
+        padding: 60px 0 100px;
+        background: #FFF;
+    }
+.content {
+    clear: both;
+    width:100%;
+    min-height: 600px;
+    padding: 20px 0 25px;
+    margin: 0 auto;
+}
+.fn-clear {
+    zoom: 1;
+}
+.page-nuts .nuts-content {
+    position: relative;
+    width: 1120px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+}
+.page-nuts .nuts-image-panel {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 636px;
+    height: 544px;
+}
+.page-nuts .nuts-image-panel .nuts-image-default {
+    visibility: visible;
+    opacity: 1;
+}
+.page-nuts .nuts-image-default, .page-nuts .nuts-image-list {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 459px;
+    height: 567px;
+    margin-left: -230px;
+    opacity: 0;
+}
+ol, ul {
+    list-style: none;
+}
+.page-nuts .choose-standard {
+    width: auto;
+    padding: 20px 0 30px;
+    border-bottom: 1px solid #EEE;
+}
+body .fn-hide {
+    display: none;
+}
+.page-nuts .choose-option li.disabled {
+    opacity: .62;
+    cursor: not-allowed;
+}
+.page-nuts .choose-option li.selected {
+    padding: 1px;
+    border: 2px solid #B2B2B2;
+    border-radius: 5px;
+}
+.page-nuts .choose-standard .standard-title:before {
+    content: "*";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    text-indent: 0;
+}
+.page-nuts .choose-standard .standard-title {
+    position: relative;
+    height: 12px;
+    line-height: 12px;
+    text-indent: 7px;
+    color: #424242;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.choose-option li {
+        display: list-item;
+    float: left;
+    background: #FFF;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+.page-nuts .choose-option li {
+    position: relative;
+    width: 134px;
+    height: 54px;
+    padding: 2px;
+    margin-left: 20px;
+    border: 1px solid #DEDEDE;
+    border-radius: 6px;
+    line-height: 54px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    -moz-transition: box-shadow .15s linear;
+    -webkit-transition: box-shadow .15s linear;
+    transition: box-shadow .15s linear;
+    user-select: none;
+}
+.page-nuts .nuts-image-default li.selected {
+    visibility: visible;
+    opacity: 1;
+    -moz-transition: all 1.5s ease;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+}
+.page-nuts .nuts-image-default li {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 459px;
+    height: 567px;
+    opacity: 0;
+    -moz-transition: all 3s ease;
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+}
+.page-nuts .switch .mobile-back {
+    -webkit-animation: leftToRight .6s ease-out;
+    -moz-animation: leftToRight .6s ease-out;
+    animation: leftToRight .6s ease-out;
+}
+.page-nuts .nuts-image-panel .mobile-back {
+    position: absolute;
+    right: 0;
+    top: 11px;
+    width: 302px;
+    height: 547px;
+}
+
+.page-nuts .sub-title {
+    height: 14px;
+    padding: 30px 0 20px;
+    line-height: 14px;
+    font-size: 14px;
+    font-family: Arial,'Hiragino Sans GB',STHeiti,'STHeiti Light [STXihei]','Microsoft Yahei',sans-serif;
+    color: #424242;
+}
+
+
+fieldset, img {
+    border: 0;
+}
+
+.page-nuts .nuts-image-panel .mobile-back .red {
+    background: url(/upload/imginit/banner-back-red.png) no-repeat;
+    background-image: -webkit-image-set(url(/upload/imginit/banner-back-red.png) 1x,url(/upload/imginit/banner-back-red.png) 2x);
+}
+.page-nuts .nuts-image-panel .mobile-back img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 302px;
+    height: 547px;
+}
+
+.page-nuts .nuts-image-panel .mobile-front .red {
+    background: url(../img/jianguo/banner-home-red.png) no-repeat;
+    background-image: -webkit-image-set(url(/upload/imginit/banner-home-red.png) 1x,url(/upload/imginit/banner-home-red@2x.png) 2x);
+}
+
+.page-nuts .nuts-image-panel .mobile-front {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 335px;
+    height: 568px;
+    background: url(/upload/imginit/banner-front.png) no-repeat;
+    background-image: -webkit-image-set(url(/upload/imginit/banner-front.png) 1x,url(/upload/imginit/banner-front@2x.png) 2x);
+}
+
+.page-nuts .nuts-image-panel .mobile-front img {
+    display: block;
+    position: absolute;
+    left: 29px;
+    top: 57px;
+    width: 244px;
+    height: 431px;
+}
+
+.page-nuts .choose-nuts-panel {
+    float: right;
+}
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.page-nuts hr {
+    overflow: hidden;
+    width: 100%;
+    height: 1px;
+    margin-top: 80px;
+    background: #E0E0E0;
+    border: none;
+}
+.page-nuts .spec-content {
+    position: relative;
+    width: 1120px;
+    margin: 0 auto;
+}
+.page-nuts .spec-main-title {
+    height: 30px;
+    padding: 80px 0 60px;
+    line-height: 30px;
+    font-size: 30px;
+}
+.page-nuts .spec-parameters-detail {
+    overflow: hidden;
+    float: right;
+    width: 720px;
+    padding: 30px 0 51px 20px;
+    border-top: 1px solid #EEE;
+    line-height: 30px;
+    font-size: 14px;
+}
+.page-nuts .spec-parameters-size .mobile-size {
+    float: right;
+    position: relative;
+    width: 302px;
+    height: 318px;
+    margin-top: 8px;
+}
+.page-nuts .red .positive {
+    background-image: url(/upload/imginit/positive-red.jpg);
+    background-image: -webkit-image-set(url(/upload/imginit/positive-red.jpg) 1x,url(/upload/imginit/positive-red@2x.jpg) 2x);
+}
+.page-nuts .spec-parameters-detail .positive {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 151px;
+    height: 282px;
+    background-image: url(../img/jianguo/spec/positive-red.jpg);
+    background-image: -webkit-image-set(url(/upload/imginit/positive-red.jpg) 1x,url(/upload/imginit/positive-red@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-size: 151px 282px;
+}
+.page-nuts .spec-parameters-size .side {
+    position: absolute;
+    left: 177px;
+    top: 0;
+    width: 15px;
+    height: 273px;
+    background-repeat: no-repeat;
+    background-size: 15px 273px;
+}
+
+.page-nuts .spec-parameters-size .size-height {
+    position: absolute;
+    left: 221px;
+    top: 0;
+    width: 7px;
+    height: 264px;
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+}
+.page-nuts .spec-parameters-size .size-height .line-1 {
+    left: 3px;
+    top: 0;
+    height: 118px;
+}
+.page-nuts .spec-parameters-size .size-height .line-2 {
+    left: 3px;
+    bottom: 0;
+    height: 118px;
+}
+
+
+.page-nuts .spec-parameters-size .size-height .size-text {
+    top: 117px;
+    line-height: 34px;
+}
+.page-nuts .spec-parameters-size .size-text {
+    position: absolute;
+    left: 50%;
+    width: 72px;
+    margin-left: -36px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial,sans-serif;
+}
+.page-nuts .spec-parameters-size .size-width {
+    left: 7px;
+    width: 135px;
+}
+ /* 测量线 */
+.page-nuts .spec-parameters-size .size-thickness, .page-nuts .spec-parameters-size .size-width {
+    position: absolute;
+    top: 279px;
+    height: 7px;
+    border-left: 1px solid #BDBDBD;
+    border-right: 1px solid #BDBDBD;
+}
+.page-nuts .spec-parameters-size .size-thickness {
+    left: 179px;
+    width: 11px;
+}
+
+.page-nuts .spec-parameters-size .size-thickness .line-1, .page-nuts .spec-parameters-size .size-width .line-1 {
+    left: 0;
+    right: 0;
+    top: 3px;
+}
+/* 测量线 */
+
+.page-nuts .spec-parameters .line-horizontal {
+    height: 1px;
+}
+
+.page-nuts .spec-parameters-size .size-height .line-1 {
+    left: 3px;
+    top: 0;
+    height: 118px;
+}
+.page-nuts .spec-parameters .line-vertical {
+    width: 1px;
+}
+.page-nuts .spec-parameters .line {
+    position: absolute;
+    background-color: #babdbd;
+}
+.page-nuts .spec-parameters-size .size-thickness .size-text, .page-nuts .spec-parameters-size .size-width .size-text {
+    top: 7px;
+}
+.page-nuts .spec-parameters-size .size-text {
+    position: absolute;
+    left: 50%;
+    width: 72px;
+    margin-left: -36px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial,sans-serif;
+}
+
+.page-nuts .spec-parameters-cpu {
+    padding: 32px 0 78px 20px;
+    background: url(/upload/imginit/product-cpu.jpg) 530px 40px no-repeat;
+    background-image: -webkit-image-set(url(/upload/imginit/product-cpu.jpg) 1x,url(/upload/imginit/product-cpu@2x.jpg) 2x);
+    background-size: 100px 100px;
+}
+
+.spec-parameters-size .side {
+    background-image: url(/upload/imginit/side-red.jpg);
+}
+
+.page-nuts .checkout-panel .checkout-info {
+    float: left;
+    line-height: 50px;
+}
+.big-main-btn a {
+    height: 44px;
+    line-height: 45px;
+    font-size: 18px;
+}
+.jianguo-blue-main-btn a {
+    background: #6C94F3;
+    background: linear-gradient(#7EA3F5,#5A82F0);
+    box-shadow: none;
+    text-shadow: none;
+    color: #FFF;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.page-nuts .checkout-panel .checkout-price span {
+    font-size: 20px;
+}
+.page-nuts .checkout-panel .checkout-price {
+    float: right;
+    padding-right: 28px;
+    font-size: 18px;
+}
+.page-nuts .introduction-title {
+    width: 460px;
+    height: 38px;
+    padding: 20px 0 28px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #E0E0E0;
+    line-height: 38px;
+    font-size: 28px;
+    font-family: '方正悠黑简体_超细';
+    letter-spacing: -2px;
+    color: #666;
+}
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.page-nuts .choose-color li.red em {
+    background: url() center no-repeat #F1757D;
+    background-image: -webkit-image-set(url() 1x,url() 2x),linear-gradient(#F18289,#EC626A);
+    background-size: 30px 30px;
+}
+.page-nuts .choose-color li.orange em {
+    background: url() center no-repeat #FB7;
+    background-image: -webkit-image-set(url() 1x,url() 2x),linear-gradient(#FCC184,#FCAB65);
+    background-size: 30px 30px;
+}
+.page-nuts .choose-color li.selected {
+    padding: 2px;
+    border: 3px solid #B2B2B2;
+}
+.page-nuts .choose-color li em {
+    overflow: hidden;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 1px 0 rgba(0,0,0,.3),inset 0 0 8px 0 rgba(0,0,0,.03);
+    text-indent: -9999em;
+    cursor: pointer;
+}
+.page-nuts .choose-color li {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    margin-left: 20px;
+    border: 2px solid #E5E5E5;
+    border-radius: 25px;
+    cursor: pointer;
+    -moz-transition: box-shadow .15s ease-out;
+    -webkit-transition: box-shadow .15s ease-out;
+    transition: box-shadow .15s ease-out;
+    user-select: none;
+}
+.page-nuts .choose-color li, .page-nuts .choose-option li {
+    float: left;
+    background: #FFF;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+.page-nuts .choose-color {
+    height: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #EEE;
+}
+.page-nuts .spec-parameters-title {
+    float: left;
+    width: 260px;
+    padding: 33px 10px 0 20px;
+    border-top: 1px solid #EEE;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.page-nuts .spec-parameters-remarks {
+    padding: 34px 20px;
+    border-top: 1px solid #EBEBEB;
+    border-top: 1px solid rgba(0,0,0,.08);
+    line-height: 2;
+    font-size: 12px;
+    color: #BDBDBD;
+}
+.page-nuts .spec-parameters-remarks br.mobile {
+    display: none;
+}
+.page-nuts .spec-parameters-remarks p+p {
+    text-indent: 2em;
+}
+
+/*浮动*/
+.page-nuts .checkout-fix-panel-follow {
+    position: fixed;
+}
+.page-nuts .checkout-fix-panel {
+    /*position: absolute;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 24px 0;
+    background: #FAFAFA;
+    background: linear-gradient(#FAFAFA,#F4F4F4);
+    border-top: 1px solid #E3E3E3;
+    box-shadow: 0 -1px 5px 0 #EFEFEF;
+}
+.page-nuts .checkout-fix-panel {
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 24px 0;
+    background: #FAFAFA;
+    background: linear-gradient(#FAFAFA,#F4F4F4);
+    border-top: 1px solid #E3E3E3;
+    box-shadow: 0 -1px 5px 0 #EFEFEF;
+}
+.page-nuts .checkout-panel {
+    height: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.page-nuts .checkout-panel .checkout-info {
+    float: left;
+    line-height: 50px;
+}
+.page-nuts .checkout-panel .thumb-image {
+    position: relative;
+    left: -11px;
+    top: -15px;
+    float: left;
+    margin-right: -3px;
+    width: 80px;
+    height: 80px;
+}
+.page-nuts .checkout-panel .thumb-image img {
+    width: 80px;
+    height: 80px;
+}
+.page-nuts .checkout-panel .thumb-name {
+    float: left;
+    font-size:15px;
+    color: #626262;
+}
+.hide-row {
+    overflow: hidden;
+    word-break: keep-all;
+}
+.hide-row, .order-cart .items-params .name, .support-cart .items-detail .detail {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.page-nuts .checkout-panel .big-main-btn, .page-nuts .checkout-panel .big-main-btn a {
+    width: 153px;
+    font-size: 18px;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+}
+.page-nuts .checkout-panel .big-main-btn {
+    float: right;
+}
+.big-main-btn {
+    height: 48px;
+}
+.jianguo-blue-main-btn {
+    background: #567CE6;
+    background: linear-gradient(#799CEA,#567CE6);
+    box-shadow: 0 1px 3px rgba(0,0,0,.1),inset 0 -1px 2px rgba(0,0,0,.2);
+}
+.blue-main-btn, .gray-main-btn, .jianguo-blue-main-btn {
+    display: block;
+    padding: 1px;
+    margin: 0 auto;
+    border-radius: 9px;
+    background: #015e94;
+    background: linear-gradient(#5598c9,#2a6da2);
+    text-shadow: rgba(255,255,255,.496094) 0 1px 0;
+    -o-user-select: none;
+    user-select: none;
+}
+.blue-main-btn, .gray-main-btn, .jianguo-blue-main-btn, .orange-main-btn {
+    cursor: pointer;
+    text-align: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.page-nuts .checkout-panel .big-main-btn, .page-nuts .checkout-panel .big-main-btn a {
+    width: 153px;
+    font-size: 18px;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+}
+.big-main-btn a {
+    height: 44px;
+    line-height: 45px;
+    font-size: 18px;
+}
+.jianguo-blue-main-btn a {
+    background: #6C94F3;
+    background: linear-gradient(#7EA3F5,#5A82F0);
+    box-shadow: none;
+    text-shadow: none;
+    color: #FFF;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.blue-main-btn a, .gray-main-btn a, .jianguo-blue-main-btn a {
+    display: block;
+    padding: 2px 0;
+    border-radius: 9px;
+    background: #5f7ed7;
+    background: -webkit-linear-gradient(#739fe1,#5f7ed7);
+    background: -moz-linear-gradient(#739fe1,#5f7ed7);
+    background: -ms-linear-gradient(#739fe1,#5f7ed7);
+    background: -o-linear-gradient(#739fe1,#5f7ed7);
+    background: linear-gradient(#739fe1,#5f7ed7);
+    box-shadow: inset 0 1px 3px #92b6ec,inset 0 0 2px #627dca,inset 0 -2px 3px #4c69b8;
+    text-shadow: #4f70b3 0 -1px 0;
+    cursor: pointer;
+    color: #fff;
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+a {
+    color: #84a3e3;
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -moz-user-select: none;
+}
+/*   导航*/
+ .header-container {
+ margin: 0 auto;
+ font-size: 12px;
+ }
+ .breadcrumb {
+    float: left;
+    color: #45474b;
+}
+ .breadcrumb li {
+    float: left;
+}
+.breadcrumb a {
+    color: #45474b;
+}
+.breadcrumb img {
+    position: relative;
+    top: -2px;
+    width: 3px;
+    height: 5px;
+    margin: 0 5px 0 3px;
+    background: url(/upload/imginit/breadcrumb-arrow.png) no-repeat;
+    background-image: -webkit-image-set(url(/upload/imginit/breadcrumb-arrow.png) 1x,url(/upload/imginit/breadcrumb-arrow@2x.png) 2x);
+}
+fieldset, img {
+    border: 0;
+}
+</style>
+</head>
+<body>
+  <%- include head.zt %>
+
+    <div class="header-menu-wrapper">
+        <div class="header-wrapper">
+            <div class="header-container fn-clear">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#/">在线商城</a>
+                        <img src="http://static.smartisanos.cn/store/asset/img/i.gif?1448530506866">
+                    </li>
+                    <li>坚果手机</li>
+                </ul>
+                <!--div class="header-account-wrapper">
+                    <div class="header-account-panel">
+                        <span class="normal-link js-login">登录</span>
+                        <span class="normal-link line-link js-register">注册</span>
+                    </div>
+
+                </div-->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content page-nuts fn-clear">
+        <div class="nuts-content fn-clear">
+            <div class="nuts-image-panel js-nuts-image-panel">
+                <ul class="nuts-image-default js-nuts-image-default js-loop-list switch">
+                    <li class="js-loop-item selected" data-index="0" data-version="normal" data-color="red">
+                        <div class="mobile-back">
+                            <img src="http://static.smartisanos.cn/store/asset/img/i.gif?1448530506866" class="red">
+                        </div>
+                        <div class="mobile-front ">
+                                <img src="http://static.smartisanos.cn/store/asset/img/i.gif?1448530506866" class="red">
+                        </div>
+                    </li>
+                    <li class="js-loop-item" data-index="1" data-version="normal" data-color="orange">
+                        <div class="mobile-back">
+                            <img src="http://static.smartisanos.cn/store/asset/img/i.gif?1448530506866" class="orange">
+                        </div>
+                        <div class="mobile-front ">
+                                <img src="http://static.smartisanos.cn/store/asset/img/i.gif?1448530506866" class="orange">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="choose-nuts-panel">
+                <p class="introduction-title">坚果手机<span>，</span>漂亮得不像实力派</p>
+                <h6 class="sub-title">1. 选择网络制式</h6>
+                <ul class="choose-option fn-clear js-choose-edition">
+                    <li class="selected" data-capacity="all">
+                        <input type="radio" name="edition" class="fn-hide" value="all" data-id="all">
+                        <span class="blue-radio blue-radio-on" data-radio-name="edition">
+                            <a></a>
+                        </span>
+                        公开版
+                    </li>
+                    <li class="disabled" data-capacity="cmcc">
+                        <input type="radio" name="edition" class="fn-hide" value="cmcc" data-id="cmcc">
+                        <span class="blue-radio" data-radio-name="edition">
+                            <a></a>
+                        </span>
+                            移动定制版
+                    </li>
+                </ul>
+                <div class="choose-standard js-standard-label">
+                    <p class="standard-title">这款坚果手机支持中国移动 2G/3G/4G 和中国联通 2G/3G/4G。</p>
+                </div>
+
+                <h6 class="sub-title">2. 选择外观版本</h6>
+                <ul class="choose-option fn-clear js-choose-version">
+                    <li class="selected" data-capacity="normal">
+                        <input type="radio" name="version" class="fn-hide" value="normal" data-id="normal">
+                        <span class="blue-radio blue-radio-on" data-radio-name="version">
+                            <a></a>
+                        </span>
+                        标准版
+                    </li>
+                    <li class="" data-capacity="young">
+                        <input type="radio" name="version" class="fn-hide" value="young" data-id="young">
+                        <span class="blue-radio" data-radio-name="version">
+                            <a></a>
+                        </span>
+                        文艺青年版
+                    </li>
+                </ul>
+                <div class="choose-standard js-version-label">  <p class="standard-title">这款 坚果手机标准版 的面板和中框为白色。</p>
+                </div>
+                <div class="js-choose-mobile-params">
+                    <h6 class="sub-title">3. 选择背壳颜色</h6>
+                    <ul class="choose-color fn-clear js-choose-color">
+                        <li class="red  selected" title="红色" data-color="red">
+                            <em>
+                                <input type="radio" name="color" class="fn-hide" value="red" data-id="red">
+                                <span class="blue-radio" data-radio-name="color">
+                                    <a></a>
+                                </span>
+                                红色
+                            </em>
+                        </li>
+                        <li class="orange  " title="橙色" data-color="orange">
+                            <em>
+                                <input type="radio" name="color" class="fn-hide" value="orange" data-id="orange">
+                                <span class="blue-radio" data-radio-name="color">
+                                    <a></a>
+                                </span>
+                                橙色
+                            </em>
+                        </li>
+                    </ul>
+                    <h6 class="sub-title color-title">4. 选择容量</h6>
+                    <ul class="choose-option choose-capacity fn-clear js-choose-capacity">
+                        <li class="16GB disabled " data-capacity="16GB">
+                            <input type="radio" name="capacity" class="fn-hide" value="16GB" data-id="16GB">
+                                <span class="blue-radio" data-radio-name="capacity">
+                                    <a></a>
+                                </span>
+                                16GB
+                            <span class="price">¥ 899</span>
+                        </li>
+                        <li class="32GB  selected" data-capacity="32GB">
+                            <input type="radio" name="capacity" class="fn-hide" value="32GB" data-id="32GB">
+                                <span class="blue-radio" data-radio-name="capacity">
+                                    <a></a>
+                                </span>
+                                32GB
+                            <span class="price">¥ 999</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="spec-content"> <div class="spec-main-title">坚果手机规格参数</div>
+            <div class="spec-parameters fn-clear">
+                <div class="spec-parameters-title">容量和内存</div>
+                <div class="spec-parameters-detail"> <p>16 / 32 GB 高速闪存</p> <p>2 GB 内存</p> </div>
+            </div>
+            <div class="spec-parameters fn-clear">
+                <div class="spec-parameters-title">颜色</div>
+                <div class="spec-parameters-detail">
+                    <p>标准版：红、橙、黄、绿、青、蓝、紫、灰</p>
+                    <p>文艺青年版：遠州鼠</p>
+                    <p>黑色版：黑色</p>
+                </div>
+            </div>
+
+            <div class="spec-parameters fn-clear">
+                <div class="spec-parameters-title">机身尺寸和重量</div>
+                <div class="spec-parameters-detail spec-parameters-size">
+                    <div class="mobile-size js-parameters-size-color red">
+                        <div class="positive"></div>
+                        <div class="side"></div>
+                        <div class="size-height">
+                            <div class="line line-vertical line-1"></div>
+                            <div class="line line-vertical line-2"></div>
+                            <div class="size-text">152.9 mm</div> </div>
+                        <div class="size-width">
+                            <div class="line line-horizontal line-1"></div>
+                            <div class="size-text">76.9 mm</div> </div>
+                        <div class="size-thickness">
+                            <div class="line line-horizontal line-1"></div>
+                            <div class="size-text">9.0 mm</div>
+                        </div>
+                    </div>
+                    <p>高度：152.9 mm</p>
+                    <p>宽度：76.9 mm</p>
+                    <p>厚度：9.0 mm</p>
+                    <p>重量：约 155 g</p>
+                </div>
+            </div>
+
+            <div class="spec-parameters fn-clear">
+                <div class="spec-parameters-title">处理器</div>
+                <div class="spec-parameters-detail spec-parameters-cpu">
+                    <p>Qualcomm<sup>®</sup> 骁龙™ 615 ( MSM8939 ) 处理器</p>
+                    <p>ARM<sup>®</sup> cortex<sup>®</sup> - A53™ 1.5 GHz x 4 +</p>
+                    <p>ARM<sup>®</sup> cortex<sup>®</sup> - A53™ 1.0 GHz x 4</p>
+                </div>
+            </div>
+            <div class="spec-parameters fn-clear">
+                <div class="spec-parameters-title">图形处理器</div>
+                <div class="spec-parameters-detail spec-parameters-gpu">
+                    <p>Adreno™ 405 550MHz 图形处理器</p>
+                </div>
+            </div>
+            <div class="spec-parameters fn-clear">
+                <div class="spec-parameters-title">包装内容</div>
+                <div class="spec-parameters-detail spec-parameters-packagingContents">
+                    <p>坚果手机</p>
+                    <p>USB 线缆及集线器</p>
+                    <p>充电器</p>
+                    <p>坚果手机产品使用说明书</p>
+                    <p>坚果手机三包凭证</p>
+                    <p>电子信息产品有害物质说明</p>
+                </div>
+            </div>
+            <div class="spec-parameters-remarks">
+                <p>注：<br class="mobile">1. 本页面所列配置及参数均以实际上市产品为准，如有变更，恕不另行通知；</p>
+                <p>2. Android™ is a trademark of Google Inc.</p>
+            </div>
+        </div>
+
+        <div class="checkout-fix-panel js-checkout-panel checkout-fix-panel-follow">
+
+            <div class="checkout-panel">
+            <div class="checkout-info">
+                <div class="thumb-panel">
+                    <div class="thumb-image">
+                        <img src="http://static.smartisanos.cn/store/asset/img/mobile/jianguo_80_red@2x.png?1448530506866">
+                    </div>
+                    <div class="thumb-name hide-row">
+                        您选择了 <span class="js-cur-name">坚果手机（红色，32GB）</span>
+                    </div>
+                </div>
+            </div>
+            <div class="jianguo-blue-main-btn big-main-btn  js-checkout">
+                <a href="/mall/order">下一步</a>
+            </div>
+            <p class="checkout-price">应付金额：<span class="js-total">¥ 999.00</span></p>
+        </div>
+        </div>
+    </div>
+
+    <%- include foot.zt %>
+
+</body>
+</html>

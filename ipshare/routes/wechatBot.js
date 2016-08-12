@@ -43,7 +43,7 @@ router.use('/', wechat(config.token).text(function(message, req, res, next) {
     default:
       res.reply({
         type: "text",
-        content: '服务器挂掉了，你的要求暂时无法满足……'
+        content: '<a href="http://ipshare.leanapp.cn">抱歉！系统当前公用于测试用</a>'
       });
       break;
   }

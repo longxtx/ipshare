@@ -1,0 +1,19 @@
+
+<div class="head">
+	<div class="wrap">
+		<h2><img src="/images/logo.png"></h2>
+		<ul>
+      <li><a href="/mall/index">首页</a></li>
+      <li><a href="/mall/shop">商城</a></li>
+      <li><a href="/mall/code">优先购买码</a></li>
+			<em></em>
+			<div class="userico">
+				<span></span><i class="fa fa-caret-down"></i>
+				<div class="fmenu">
+					<a href="/mall/mlogin" id="login">用户登录</a>
+					<a href="/mall/mreg" id="reg">用户注册</a>
+				</div>
+			</div>
+		</ul>
+	</div>
+</div>

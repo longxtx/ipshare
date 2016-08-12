@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HIMO特商</title>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+  <%- include head.zt %>
+	<div class="shopmain">
+		<div class="wrap">
+			<ul>
+				<li>
+					<img src="/images/productimg.png" class="fl">
+					<div class="shopinfo fl">
+						<h2>iPhone 6s</h2>
+						<p>Developing an iPhone with a larger<br>more advanced display meant pushing the edge of design</p>
+						<span>2015年09月09日 上午10点预售</span>
+						<a href="/mall/product">现在预售</a>
+					</div>
+				</li>
+				<li>
+					<img src="/images/productimg.png" class="fl">
+					<div class="shopinfo fl">
+						<h2>iPhone 6s</h2>
+						<p>Developing an iPhone with a larger<br>more advanced display meant pushing the edge of design</p>
+						<span>2015年09月09日 上午10点预售</span>
+						<a href="/mall/product">现在预售</a>
+					</div>
+				</li>
+				<li>
+					<img src="/images/productimg.png" class="fl">
+					<div class="shopinfo fl">
+						<h2>iPhone 6s</h2>
+						<p>Developing an iPhone with a larger<br>more advanced display meant pushing the edge of design</p>
+						<span>2015年09月09日 上午10点预售</span>
+						<a href="/mall/product">现在预售</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+<%- include foot.zt %>
+</body>
+</html>

@@ -1,0 +1,257 @@
+@charset "utf-8";/*CSS reset*/
+*{  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: none;
+  transition-duration: none;}
+html {
+	color:#555;
+	background:#E7E9E9;
+	font-family:"微软雅黑";
+	font-weight: 300;
+	font-family: 'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif;
+	font-size: 62.5%;
+	line-height: 1.231;
+}
+body{font-size: 12px;background: #efefef}
+body,div,dl,a,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,select{margin:0;padding:0;font-family:Verdana,"微软雅黑",sans-serif}
+table{border-collapse:collapse;border-spacing:0}
+em,cite{font-style:normal}
+fieldset,img{border:0}
+del,ins{text-decoration:none}
+li{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:baseline}
+sub{vertical-align:baseline}
+legend{color:#000}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+input,button,textarea,select{*font-size:100%}
+a:link,a:visited{text-decoration:none;font-family:Verdana,"微软雅黑",sans-serif}
+a:hover,a:active{text-decoration:none}
+input, select{outline:medium none}
+.wrap{width: 100%;margin: 0 auto}
+.tl{text-align:left}
+.tc{text-align:center}
+.tr{text-align:right}
+.fl{float:left;display:inline}
+.fr{float:right;display:inline}
+.cb{clear:both;height:0px;*line-height:0px;*overflow:hidden;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.none{display:none}
+.mt10{margin-top:10px}
+/*公共样式*/
+.head {
+  background: #fff;
+  height: 88px;
+  overflow: hidden;
+}.head li {
+  display: inline-block;
+  margin: 0 4%;
+  font-size: 1.4rem;
+  height: 3em;
+  line-height: 3em;
+}.userico {
+  display: inline-block;
+  padding-left: 2.4em;
+  padding-top: 13px;
+  height: 3em;
+}.userico span {
+  background: url(../images/userico.png) no-repeat;
+  width: 13px;
+  height: 15px;
+  display: inline-block;
+  background-size: cover;
+}.userico i {
+  font-size: 1.6rem;
+  margin-left: 7px;
+  vertical-align: top;
+  margin-top: 0px;
+}.fmenu {
+  position: absolute;
+  top: 80px;
+  display: none;
+  background: #fff;
+  padding: 8px 0;
+  margin-left: -28px;
+  box-shadow: 2px 3px 9px rgba(0, 0, 0, 0.19);
+  border-radius: 0 0 4px 4px;
+}.fmenu a {
+  display: block;
+  font-size: 14px;
+  color: #6F6F6F;
+  line-height: 30px;
+  padding: 0px 22px;
+}.head h2 {
+  text-align: center;display:block
+}.head h2 img {
+  width: 3em;
+  margin-top: 6px;
+}.head ul {  text-align: center;
+  display: block;
+  overflow: hidden;
+  padding: 0 6%;
+}.userico:hover .fmenu{display:block}
+.fmenu a:hover{background:#eee}
+.head li a {
+  color: #595757;
+}.indexmain h1 {
+  font-size: 3rem;
+  color: #3e3a39;
+}.indexmain p {
+  font-size: 1.6rem;
+  margin: 10px 0;
+}.yybtn {
+  margin: 29px 0 76px;
+}.yybtn a {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8fdafb), color-stop(1, #05c1ff));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fdafb', endColorstr='#05c1ff', GradientType='0');
+  background-image: -moz-linear-gradient(top, #8fdafb, #05c1ff);
+  padding: 9px 30px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 0px #3f9ac4;
+}.foot {
+  background: #fff;
+  overflow: hidden;
+  padding: 20px 5%;
+  width: 100%;
+  display: block;
+}.foot p {
+  line-height: 18px;
+}.foot .fp1 {
+  color: #9fa0a0;
+}.foot .fp2 {
+  color: #d0d1d1;
+}.indexmain {
+  text-align: center;
+  padding: 4em 0;
+}.indexmain img {
+  width: 70%;
+}
+
+
+.indexFrom{overflow:hidden;}
+.indexFrom h3{overflow:hidden;font-size:2.4rem;font-weight:900;text-align:center;line-height:82px;color:#9fa0a0;letter-spacing:10px;margin-top:20px;}
+.indexFrom-in{overflow:hidden;background:#efefef;border-radius:0 0 6px 6px;padding:0px 1em 50px;}
+.indexFrom-in li{overflow:hidden;margin-top:20px;color:#b5b5b6;font-size:1.2rem;}
+.indexFrom-in li span{float:right;}
+.indexFrom-in li a{color:#13c3ff;text-decoration:underline;margin-left:10px;}
+.indexFrom-in li a:hover{color:#f00;}
+.indexFrom-in li .indexFrom-input1{width:100%;height:54px;line-height:54px;border:1px solid #bbbbbc;border-radius:6px;padding:0 10px;font-size:1.6rem;background:none;}
+.indexFrom-in li .indexFrom-input2{width:60%;height:54px;line-height:54px;border:1px solid #bbbbbc;border-radius:6px;padding:0 10px;font-size:1.6rem;background:none;float:left;}
+
+.indexFrom-in li .indexFrom-button{width:100%;height:56px;line-height:56px;border:none;border-radius:6px;text-align:center;font-size:1.8rem;background:#13c3ff;color:#fff;letter-spacing:10px;}
+.indexFrom-in li .indexFrom-button2{width:35%;height:56px;line-height:56px;border:none;border-radius:6px;text-align:center;font-size:1.6rem;background:#b5b5b6;color:#4c4c4c;float:Right;}
+
+
+/*优先购买码*/
+.codemain{overflow:hidden;padding:10% 1em;}
+.codemain .wrap{overflow:hidden;}
+.codemain .wrap h3{font-size: 2rem;color:#595757}
+.cdcode {background: url(../images/codebg.png) no-repeat;background-size:100%;width: 100%;height:100%;text-align: center;color: #fff;margin:40px 0 30px;padding-bottom:2em;}
+.cdcode strong{
+font-size: 2.4rem;
+padding-top:1em;
+display: block;
+}.cdcode p{
+font-size:1.8rem;
+margin-top:1em;
+font-family:Arial;
+}.cdcode span{
+font-size: 1.6rem;
+margin-top: 1em;
+display: block;
+}.cdinput input[type="text"] {
+background: none;
+margin: 0;
+border: 1px solid #ddd;
+padding: 14px 0;
+border-radius: 8px;
+font-size: 1.6rem;
+text-indent: 1.2em;
+}.input_code {
+display: block;margin-bottom: 14px;
+}.input_code input[type="text"] {
+display: block;
+width: 100%;
+}.input_yzm {
+display: block;overflow: hidden;
+margin-bottom: 30px;
+}.input_yzm input[type="text"] {
+float: left;
+margin-right: 31px;
+}.input_yzm img {
+float: left;
+vertical-align: middle;
+height: 48px;width: 137px;
+}.cdbtn {
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8fdafb), color-stop(1, #05c1ff));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fdafb', endColorstr='#05c1ff', GradientType='0');
+background-image: -moz-linear-gradient(top, #8fdafb, #05c1ff);
+padding: 8px 43px;
+font-size: 16px;
+color: #fff;
+border-radius: 4px;
+box-shadow: 0px 2px 0px #3f9ac4;
+display: inline-block;
+border: none;
+margin: 10px auto;
+}.cdinput {
+text-align: center;
+}.cdtext{
+font-size: 1.4rem;
+color: #9fa0a0;
+line-height: 29px;
+width: 494px;
+margin-top: 56px;
+}.cdt_top {
+margin-bottom: 40px;
+}.cdt_bt li {
+display: table;
+}.cdt_bt li em {
+display: table-cell;
+}
+
+
+/*商城*/
+.shopmain {overflow:hidden;
+}
+.shopmain li {
+overflow: hidden;margin:18px 0;border-bottom:1px solid #cccdcd;position:relative;padding:2em 1em;
+}.shopmain li img {
+width: 10rem;
+height:13rem;
+}
+.shopinfo {position:absolute;right:1rem;top:2em;
+text-align:right;
+}.shopinfo h2 {
+color: #3e3a39;
+font-size: 3rem;
+}.shopinfo span {
+font-size: 1.8rem;
+display: block;margin-top:0.5em;
+}.shopinfo a {
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8fdafb), color-stop(1, #05c1ff));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8fdafb', endColorstr='#05c1ff', GradientType='0');
+background-image: -moz-linear-gradient(top, #8fdafb, #05c1ff);
+padding: 10px 30px;
+font-size: 1.6rem;
+color: #fff;
+border-radius: 4px;
+box-shadow: 0px 2px 0px #3f9ac4;
+display: inline-block;margin-top:0.5em;
+}
+
+.shopAbout{margin:2em;background:#fff;border-radius:6px;padding:0 1em 2em;
+box-shadow:0px 3px 8px rgba(0, 0, 0, 0.3);overflow:hidden;}
+.shopAbout li{text-align:center;overflow:hidden;width:50%;float:left;overflow:hidden;margin-top:2em;line-height:1.5em;}
+.shopAbout li img{width:4em;height:4em;}
+.shopAbout li h3{font-size:1.4rem;color:#595757;margin-top:1em;}
+.shopAbout li p{font-size:1.2rem;color:#595757;}

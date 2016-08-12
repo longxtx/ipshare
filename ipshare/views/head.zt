@@ -1,0 +1,79 @@
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#login,.heibg1").click(function(){
+    $(".heibg1,.loginbox").toggleClass("open");
+  });
+   $("#reg,.heibg2").click(function(){
+    $(".heibg2,.regbox").toggleClass("open");
+  });
+});
+</script>
+
+<div class="head">
+	<div class="wrap">
+		<h2><img src="/images/logo.png"></h2>
+		<ul>
+      <li><a href="/mall/index">首页</a></li>
+      <li><a href="/mall/shop">商城</a></li>
+      <li><a href="/mall/code">优先购买码</a></li>
+			<em></em>
+			<div class="userico">
+				<span></span><i class="fa fa-caret-down"></i>
+				<div class="fmenu">
+					<a href="javascript:;" id="login">用户登录</a>
+					<a href="javascript:;" id="reg">用户注册</a
+				</div>
+			</div>
+		</ul>
+	</div>
+</div>
+
+<!--登录注册弹出层-->
+<div class="heibg1"></div>
+<div class="heibg2"></div>
+
+<div class="loginbox">
+	<div class="indexFrom">
+		<h3>登录</h3>
+		<div class="indexFrom-in">
+			<ul>
+				<li><input name="" type="text" placeholder="请输入账号/邮箱/手机号" class="indexFrom-input1" /></li>
+				<li><input name="" type="text" placeholder="请输入密码" class="indexFrom-input1" /></li>
+				<li>
+					<input name="remember" type="checkbox" value="1"> 七天内自动登录
+					<span>
+						<a href="">注册新账号</a>
+						<a href="">忘记密码</a>
+					</span>
+				</li>
+				<li><input name="" type="button" value="登录" class="indexFrom-button" /></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="regbox">
+
+	<div class="indexFrom">
+		<h3>注册</h3>
+		<div class="indexFrom-in">
+			<ul>
+				<li><input name="" type="text" placeholder="请输入手机号" class="indexFrom-input1" /></li>
+				<li>
+					<input name="" type="text" placeholder="请输入验证码" class="indexFrom-input2" />
+					<input name="" type="button" value="获取验证码" class="indexFrom-button2" />
+				</li>
+                <!--
+				<li><input name="" type="text" placeholder="请输入邮箱" class="indexFrom-input1" /></li>
+                 -->
+				<li><input name="" type="text" placeholder="请输入密码" class="indexFrom-input1" /></li>
+				<li class="tc">
+					<input name="remember" type="checkbox" value="1"> 我已阅读并同意遵守<a href="">法律声明</a>和<a href="">隐私条款</a>
+				</li>
+				<li><input name="" type="button" value="注册" class="indexFrom-button" /></li>
+			</ul>
+		</div>
+	</div>
+
+</div>

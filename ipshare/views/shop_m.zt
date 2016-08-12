@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HIMO特商</title>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/base_m.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<%- include head_m.zt %>
+
+	<div class="shopmain">
+		<div class="wrap">
+			<ul>
+				<li>
+					<img src="/images/indexbigimg_m.png" class="fl">
+					<div class="shopinfo fl">
+						<h2>iPhone 6s</h2>
+						<span>2015年09月09日</span>
+						<span>上午10点预售</span>
+						<a href="/mall/product">现在预售</a>
+					</div>
+				</li>
+				<li>
+					<img src="/images/indexbigimg_m.png" class="fl">
+					<div class="shopinfo fl">
+						<h2>iPhone 6s</h2>
+						<span>2015年09月09日</span>
+						<span>上午10点预售</span>
+						<a href="/mall/product">现在预售</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="shopAbout">
+		<ul>
+			<li>
+				<img src="/images/shopAbout-img1.png" alt="" />
+				<h3>在线客服</h3>
+				<p>周一至周日9:00-18:00</p>
+			</li>
+			<li>
+				<img src="/images/shopAbout-img2.png" alt="" />
+				<h3>7天无理由退货</h3>
+				<p>7天无理由退货  请放心购买</p>
+			</li>
+			<li>
+				<img src="/images/shopAbout-img3.png" alt="" />
+				<h3>15天免费换货</h3>
+				<p>7天内如遇质量问题  免费换货</p>
+			</li>
+			<li>
+				<img src="/images/shopAbout-img4.png" alt="" />
+				<h3>满150元 免运费</h3>
+				<p>全场使用顺丰快递</p>
+			</li>
+		</ul>
+	</div>
+
+	<%- include foot_m.zt %>
+</body>
+</html>

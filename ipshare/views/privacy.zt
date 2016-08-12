@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>首页</title>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+<style>
+
+    .section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+.section .content {
+    box-shadow: rgba(0,0,0,.27) 0 1px 3px,#DCDCDC 0 1px 0,#DDD 0 -1px 0;
+}
+.content {
+    background: #fff;
+    border-radius: 8px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.content h1 {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 5;
+    padding: 0 30px;
+}
+.aside h1, .content h1 {
+    border-bottom: 1px solid #CFCFCF;
+    border-radius: 8px 8px 0 0;
+    box-shadow: rgba(0,0,0,.12) 0 1px 8px;
+    background: url(../img/step-order-box-title-bg_1452a46596.jpg) repeat-x;
+    line-height: 60px;
+    font-size: 18px;
+}
+.content h2 {
+    background: #E6E7E8;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+.content.p-fixed p {
+    margin-bottom: 0;
+}
+.content p {
+    margin-bottom: 7px;
+}
+.content dd, .content dt, .content li, .content p {
+    padding: 0 30px;
+    line-height: 1.857142857142857;
+}
+.container {
+
+    margin-left: 60px;
+    margin-right: 60px;
+}
+</style>
+</head>
+<body>
+
+  <%- include head.zt %>
+	<div ng-view="" autoscroll="true" class="ng-scope"><div class="section ng-scope"><div class="container"><div class="content p-fixed"><h1 ng-bind-html="'privacy.title' | translate" class="ng-binding">隐私条款</h1><h2 ng-bind-html="'privacy.section1.title' | translate" class="ng-binding">1. 信息的收集和使用</h2><section ng-bind-html="'privacy.section1.text' | translate" class="ng-binding"><p>（1）为了以创建账户、识别用户、回应查询和邮件等方式来为您提供服务、改进软件性能和外观、推荐新功能/新产品等目的，Himo商城会要求您提供个人信息（包括但不限于您的姓名、电话号码、电子邮件地址等），并且会收集其他与您相关的信息（包括但不限于设备信息、日志信息、位置信息以及其他类似的特征记录）。</p><p>（2）Himo商城的用户体验改进计划是基于对使用数据的统计，来诊断系统问题，优化产品体验的计划。我们会使用 Google Analytics 等工具统计您在使用Himo商城产品（包括 Smartisan OS 操作系统、系统中的所有官方应用及其他设置等）过程中产生的数据信息。我们在用户体验改进计划中仅会累计所有用户的总体使用数据，不会收录或上传任何涉及您个人身份信息的内容。前述统计内容包括但不限于：应用启动数，页面访问数，重点按钮点击数，设置项的配置属性等。随着Himo商城产品的后续版本升级，我们统计的范围会有所改变，您下载/安装/使用后续版本Himo商城产品的行为将被视为您对届时相关改变的同意。</p><p>（3）Himo商城可能会将您通过自己的帐户提交的信息与正天的其他服务或第三方的信息相结合，以便为您提供更好的体验并提高Himo商城的服务质量。</p><p>（4）Himo商城的产品和服务中可能含有第三方产品和/或服务的链接或信息。如果您将个人信息填写在其他平台上或通过第三方程序提交/发布，则该方可能会获知您的信息。该第三方应用程序可能有其相应的隐私政策规定，请仔细查看，并在提供个人信息前请仔细考虑清楚。本隐私政策不适用于第三方向您收集信息的行为，Himo商城无法控制第三方的行为，因此也不会对第三方收集、使用您信息的行为承担责任。</p><p>（5）Himo商城将严格遵守有关法律法规和本隐私政策所载明的内容收集、使用您的信息。除非持有Himo商城官方出具的授权文件，否则Himo商城的具体工作人员不会直接向您索要个人信息。如遇此类情况，您可以直接与Himo商城联系。</p></section><h2 ng-bind-html="'privacy.section2.title' | translate" class="ng-binding">2. 信息的披露</h2><section ng-bind-html="'privacy.section2.text' | translate" class="ng-binding"><p>（1）除非法律法规规定、政府部门要求或本隐私政策载明的例外情况，Himo商城会妥善保存您的信息，不予泄露。</p><p>（2）您于此授权，在以下情形中，Himo商城可以向第三方披露您的信息而无需再行获得您的同意：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; （a）如果Himo商城披露这些信息是用来识别、联系或向可能对Himo商城的权利或财产、网站用户或者其他任何人（包括其他任何人的权利和财产）造成损害之行为提起诉讼之必要；</p><p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;（b）Himo商城将个人信息提供给Himo商城的关联方或其他有合作关系的企业或个人，以便其代表/协助Himo商城处理这些信息。Himo商城要求上述各方同意按照Himo商城的规定、本隐私政策以及有关法律法规之规定来处理这些信息。</p></section><h2 ng-bind-html="'privacy.section3.title' | translate" class="ng-binding">3. 信息安全</h2><section ng-bind-html="'privacy.section3.text' | translate" class="ng-binding"><p>（1）Himo商城将尽合理的努力保障您的信息安全，但是您应当知晓Himo商城不能完全避免与个人信息安全相关的风险（特别是发生Himo商城无法控制的情况时，如不可抗力或第三方原因），因此，Himo商城对隐私信息的维护或保密无法做出任何确定性的保证或承诺。如果Himo商城知悉其所获取并储存的数据安全受到危害或由于外部行为（包括但不限于外部安全攻击）使用户的非公开信息被披露给不相关第三方，尽管本政策中有其他免责规定，Himo商城仍将采取其认为适当的合理措施（包括但不限于内部调查、上报并通知执法机构、以及配合执法机构工作等）。同时，Himo商城也会在其认为适当的情况下采取合法合理措施通知相关用户，告知其被披露的信息以及Himo商城对该信息的知悉程度。</p><p>（2）您应当注意保护您的个人信息安全。例如，不要泄露您的个人密码等。</p><p>（3）Himo商城会采取必要手段、努力防止内部工作人员越权获取/利用/泄露您的信息。</p></section><h2 ng-bind-html="'privacy.section4.title' | translate" class="ng-binding">4. 对未成年人信息的收集和使用</h2><section ng-bind-html="'privacy.section4.text' | translate" class="ng-binding"><p>（1）Himo商城要求未成年人在其法定监护人的许可和指导下使用Himo商城的产品或服务。</p><p>（2）如果您是未成年人，您需要确保在提供个人信息前，已经获得了您法定监护人的同意。</p></section><h2 ng-bind-html="'privacy.section5.title' | translate" class="ng-binding">5. 本隐私政策的修订</h2><section ng-bind-html="'privacy.section5.text' | translate" class="ng-binding"><p>虽然本隐私声明说明了Himo商城在保护隐私方面所遵循的标准，但这些标准可能会发生变化。如有更新，Himo商城会在发布修订版本时以Himo商城认为适当的方式通知您变动内容和生效日期。</p></section></div></div></div></div>
+
+
+<%- include foot.zt %>
+
+
+</body>
+</html>

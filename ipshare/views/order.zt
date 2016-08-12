@@ -1,0 +1,592 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>HIMO特商订单</title>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/base.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
+
+<style>
+    /*   导航*/
+    .header-wrapper {
+        background: url(/images/global-gray-bg-light.jpg) top center no-repeat;
+        width: 100%;
+        height: 38px;
+    }
+    .header-container {
+        margin: 0 auto;
+        font-size: 12px;
+    }
+.breadcrumb {
+    float: left;
+    color: #45474b;
+}
+.breadcrumb li {
+    float: left;
+}
+.breadcrumb a {
+    color: #45474b;
+}
+.breadcrumb img {
+    position: relative;
+    top: -2px;
+    width: 3px;
+    height: 5px;
+    margin: 0 5px 0 3px;
+    background: url(/upload/imginit/breadcrumb-arrow.png) no-repeat;
+    background-image: -webkit-image-set(url(/upload/imginit/breadcrumb-arrow.png) 1x,url(/upload/imginit/breadcrumb-arrow@2x.png) 2x);
+}
+fieldset, img {
+    border: 0;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+ol, ul {
+    list-style: none;
+}
+.fn-clear {
+    zoom: 1;
+}
+
+.layout-container {
+    min-height: 400px;
+    background: url(/images/con-bg.jpg) top repeat-x #F1F1F1;
+}
+.content {
+    clear: both;
+    width: 1120px;
+    min-height: 600px;
+    padding: 20px 0 25px;
+    margin: 0 auto;
+}
+.order-step {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0,0,0,.27) 0 1px 3px;
+}
+
+
+.order-step .step-choose .step-label {
+    padding-left: 64px;
+    background-position: 30px -540px;
+    color: #FFF;
+}
+.on-checkout-step .step-choose .step-label {
+    background-position: 30px -640px;
+    color: #626262;
+}
+.order-step .step-label {
+    height: 20px;
+    padding-left: 43px;
+    margin-top: 15px;
+    background: url(/images/order-step.png) no-repeat;
+    line-height: 20px;
+    color: #626262;
+}
+
+
+.order-step .step-checkout-prev {
+    background-position: -3px -180px;
+}
+
+.order-step .step-checkout, .order-step .step-checkout-next, .order-step .step-checkout-prev, .order-step .step-choose, .order-step .step-confirm, .order-step .step-last-bg {
+    float: left;
+    width: 14px;
+    height: 50px;
+    background: url(/images/order-step.png) no-repeat;
+}
+.on-checkout-step .step-checkout-prev {
+    background-position: -3px -300px;
+}
+
+.order-step .step-checkout {
+    background-position: 0 -120px;
+}
+.order-step .step-checkout, .order-step .step-choose, .order-step .step-confirm {
+    width: 364px;
+    background-repeat: repeat-x;
+}
+.on-checkout-step .step-checkout {
+    background-position: 0 0;
+}
+.order-step .step-checkout .step-label {
+    background-position: 9px -600px;
+}
+.on-checkout-step .step-checkout .step-label {
+    background-position: 9px -560px;
+    color: #FFF;
+}
+
+.order-step .step-label {
+    height: 20px;
+    padding-left: 43px;
+    margin-top: 15px;
+   background: url(/images/order-step.png) no-repeat;
+    line-height: 20px;
+    color: #626262;
+}
+.on-checkout-step .step-choose {
+    background-position: 0 -60px;
+}
+
+.order-step .step-checkout-next {
+    background-position: -3px -240px;
+}
+.on-checkout-step .step-checkout-next {
+    background-position: -3px -360px;
+}
+.order-step .step-confirm {
+    background-position: 0 -120px;
+}
+.order-step .step-checkout, .order-step .step-choose, .order-step .step-confirm {
+    width: 364px;
+    background-repeat: repeat-x;
+}
+.order-step .step-confirm .step-label {
+    background-position: 9px -620px;
+}
+.page-order-checkout .gray-box {
+    margin-top: 30px;
+}
+.gray-box {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: rgba(0,0,0,.27) 0 1px 3px,#DCDCDC 0 1px 0,#DDD 0 -1px 0;
+}
+.gray-box, .gray-btn-menu-on:hover {
+    background: #FFF;
+}
+.gray-box .pre-title {
+    position: relative;
+    z-index: 2;
+}
+.gray-box .title {
+    height: 60px;
+    padding: 0 10px 0 24px;
+    background: url(/images/gray-box-title-bg.jpg) repeat-x;
+    line-height: 60px;
+    border-bottom: 1px solid #CFCFCF;
+    border-radius: 8px 8px 0 0;
+    box-shadow: rgba(0,0,0,.12) 0 1px 8px;
+}
+.gray-box .columns-title h2 {
+    float: left;
+}
+.gray-box .title h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #626262;
+}
+.empty-address {
+    padding: 30px;
+}
+.empty-address .add-address-form {
+    float: left;
+    width: 480px;
+    margin: 20px;
+}
+
+.address-form .form-item, .address-form .form-item-select {
+    float: left;
+    width: auto;
+    height: 40px;
+    margin: 0 8px 0 0;
+}
+.address-form .module-form-row {
+    padding-bottom: 18px;
+}
+.module-form-row {
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+.address-form .module-form-item-wrapper {
+    margin-bottom: 0;
+}
+.module-form-row .small-item {
+    width: 180px;
+    height: 36px;
+    background: url(/images/order-other-info-edit-text-bg.png) repeat-x;
+    border-radius: 6px;
+    line-height: 36px;
+    font-size: 14px;
+}
+.module-form-item-wrapper {
+    display: block;
+    position: relative;
+    width: 372px;
+    height: 48px;
+    margin: 1px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    line-height: 48px;
+    font-size: 18px;
+    opacity: .618;
+    transition: opacity .3s ease-in;
+    -moz-transition: opacity .3s ease-in;
+    -webkit-transition: opacity .3s ease-in;
+    -o-transition: opacity .3s ease-in;
+}
+.module-form-row .no-icon i {
+    left: 15px;
+}
+.module-form-row .small-item i {
+    font-size: 14px;
+}
+.module-form-item-wrapper i {
+    position: absolute;
+    left: 65px;
+    top: 0;
+    font-style: normal;
+    font-size: 18px;
+    color: #333;
+}
+.module-form-row .small-item input {
+    font-size: 14px;
+    padding-left: 15px;
+    margin-top: 8px;
+    width: 137px;
+}
+.module-form-item-wrapper input {
+    position: relative;
+    z-index: 3;
+    width: 290px;
+    padding: 0 13px 0 17px;
+    background: 0 0;
+    border: none;
+    font-size: 18px;
+    color: #333;
+}
+input:invalid, input:valid {
+    background-color: transparent;
+    box-shadow: none;
+}
+.module-form-row .small-item .verify-error, .module-form-row .small-item .verify-success {
+    right: 6px;
+    top: 5px;
+}
+.module-form-row .verify-error, .module-form-row .verify-success {
+    display: none;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    z-index: 5;
+    padding: 0 9px;
+    background: #9CBAEF;
+    border-radius: 5px;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0;
+    transition: all 150ms ease-in;
+    -moz-transition: all 150ms ease-in;
+    -webkit-transition: all 150ms ease-in;
+    -o-transition: all 150ms ease-in;
+}
+.address-form .form-item, .address-form .form-item-select {
+    float: left;
+    width: auto;
+    height: 40px;
+    margin: 0 8px 0 0;
+}
+.address-form .module-form-row {
+    padding-bottom: 18px;
+}
+.module-form-row {
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+.address-form .small-item-mobile {
+    width: 251px;
+}
+.address-form .module-form-item-wrapper {
+    margin-bottom: 0;
+}
+.fn-clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.empty-address .local-info {
+    width: 500px;
+    padding: 20px 20px 0 0;
+    float: right;
+    line-height: 22px;
+}
+.empty-address .local-info h5 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+    padding: 0 8px 5px 0;
+    margin-right: 8px;
+}
+.fn-left {
+    float: left;
+}
+.fn-left, .fn-right {
+    display: inline;
+}
+.empty-address .stitle a.get-more, .empty-address .stitle h5.get-more {
+    display: inline-block;
+}
+.empty-address .local-info li {
+    width: 480px;
+    font-size: 12px;
+    color: #666;
+    line-height: 24px;
+    margin-bottom: 3px;
+}
+.empty-address .local-info li.line {
+    padding-top: 24px;
+}
+.address-form .small-item-telephone-area input {
+    width: 76px;
+}
+.address-form .small-item-telephone-area {
+    width: 119px;
+}
+.address-form .small-item-telephone {
+    width: 312px;
+}
+.address-form {
+    width: 460px;
+    margin: 0 auto;
+}
+.browser-webkit .address-form .province {
+    width: 160px;
+}
+.browser-webkit .module-form-row select {
+    height: 36px;
+    margin: 1px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+    box-shadow: 0 -2px 3px rgba(0,0,0,.06) inset;
+    background: -webkit-linear-gradient(top,#fdfdfd,#f1f1f1);
+    background: -moz-linear-gradient(top,#fdfdfd,#f1f1f1);
+    background: -ms-linear-gradient(top,#fdfdfd,#f1f1f1);
+    background: -o-linear-gradient(top,#fdfdfd,#f1f1f1);
+    background: linear-gradient(top,#fdfdfd,#f1f1f1);
+    line-height: 33px;
+    text-indent: 16px;
+    font-size: 13px;
+    color: #333;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+.module-form-row .select-item select {
+    margin: 0 0 0 12px;
+    background-color: transparent;
+    border: none;
+}
+.browser-webkit .module-form-row div.select-item {
+    width: auto;
+    height: auto;
+    margin: 0;
+    background: 0 0;
+    border: none;
+    box-shadow: none;
+    opacity: 1;
+}
+.province {
+    width: 160px;
+}
+
+.module-form-row .small-item input {
+    font-size: 14px;
+    padding-left: 15px;
+    margin-top: 8px;
+    width: 137px;
+}
+.module-form-item-wrapper input {
+    position: relative;
+    z-index: 3;
+    width: 290px;
+    padding: 0 13px 0 17px;
+    background: 0 0;
+    border: none;
+    font-size: 18px;
+    color: #333;
+}
+input:invalid, input:valid {
+    background-color: transparent;
+    box-shadow: none;
+}
+.address-form .small-item-location input {
+    width: 400px;
+}
+.address-form .small-item-location {
+    width: 443px;
+}
+.module-form-row .verify-error:after {
+    display: block;
+    position: absolute;
+    left: -28px;
+    top: -2px;
+    z-index: 20;
+    width: 28px;
+    height: 28px;
+    content: ' ';
+    background: url(/../img/library/error-layer.png) no-repeat;
+}
+.module-form-row .small-item .verify-error, .module-form-row .small-item .verify-success {
+    right: 6px;
+    top: 5px;
+}
+
+.module-form-row .verify-error, .module-form-row .verify-success {
+    display: none;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    z-index: 5;
+    padding: 0 9px;
+    background: #9CBAEF;
+    border-radius: 5px;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0;
+    transition: all 150ms ease-in;
+    -moz-transition: all 150ms ease-in;
+    -webkit-transition: all 150ms ease-in;
+    -o-transition: all 150ms ease-in;
+}
+.module-small-error-wrapper {
+    border: 1px solid #9CBAEF;
+    opacity: 1;
+}
+</style>
+</head>
+<body>
+  <%- include head.zt %>
+
+    <div class="header-menu-wrapper">
+        <div class="header-wrapper">
+            <div class="header-container fn-clear">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="#/">在线商城</a>
+                        <img src="http://static.smartisanos.cn/store/asset/img/i.gif?1448530506866">
+                    </li>
+                    <li>填写订单</li>
+                </ul>
+                <!--div class="header-account-wrapper">
+                    <div class="header-account-panel">
+                        <span class="normal-link js-login">登录</span>
+                        <span class="normal-link line-link js-register">注册</span>
+                    </div>
+
+                </div-->
+            </div>
+        </div>
+    </div>
+
+    <div class="layout-container fn-clear" id="main" style="min-height: 170px;">
+    <div class="content page-order-checkout">
+        <!--   进度指引  b  -->
+        <div class="order-step on-checkout-step fn-clear">
+            <div class="step-choose">
+                <div class="step-label">选择产品</div>
+            </div>
+            <div class="step-checkout-prev"></div>
+            <div class="step-checkout">
+                <div class="step-label">填写订单信息</div>
+            </div>
+            <div class="step-checkout-next"></div>
+            <div class="step-confirm">
+                <div class="step-label">确认付款</div>
+            </div>
+            <div class="step-last-bg"></div>
+        </div>
+        <!--   进度指引  e  -->
+        <div class="js-checkout-address-box fn-clear">
+            <div class="gray-box fn-clear">
+                <div class="title columns-title pre-title">
+                    <h2>收货信息</h2>
+                </div>
+                <div class="box-inner js-checkout-address-panel ">
+                    <div class="empty-address js-single-address-panel fn-clear" style="display: block;">
+                        <div class="address-form add-address-form">
+                            <div>
+                                <div class="address-form fn-clear">
+                                    <div class="fn-clear">
+                                        <div class="module-form-row form-item">
+                                            <div class="module-form-item-wrapper no-icon small-item">
+                                                <i>收货人姓名</i>
+                                                <input type="text" name="accept_name" class="js-verify" value="" data-verify=":notNull/errorStr/strRange,{0-20}">
+                                                <div class="verify-error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="module-form-row form-item">
+                                            <div class="module-form-item-wrapper no-icon small-item small-item-mobile">
+                                                <i>手机号</i>
+                                                <input type="text" name="mobile" class="js-verify" value="" data-verify=":notNull/mobile">
+                                                <div class="verify-error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fn-clear">
+                                        <div class="module-form-row form-item">
+                                            <div class="module-form-item-wrapper no-icon small-item small-item-telephone-area">
+                                                <i>区号(可选)</i>
+                                                <input type="text" name="area_code" class="js-verify js-address-area-code" value="" data-verify=":nullOrTelephoneArea">
+                                                <div class="verify-error"></div>
+                                            </div>
+                                        </div>
+                                        <div class="module-form-row form-item">
+                                            <div class="module-form-item-wrapper no-icon small-item small-item-telephone">
+                                                <i>固定电话(可选)</i>
+                                                <input type="text" name="telephone" class="js-verify js-address-telephone" value="" data-verify=":nullOrTelephone">
+                                                <div class="verify-error"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fn-clear">
+                                        <div class="module-form-row form-item-select">
+                                            <div class="module-form-item-wrapper no-icon small-item select-item province-wrapper">
+                                                <select name="province_code" class="province js-form-province js-verify" data-verify=":notNull">
+                                                    <option value="0">请选择省份</option>  <option value="110000">北京市</option>  <option value="120000">天津市</option>  <option value="130000">河北省</option>  <option value="140000">山西省</option>  <option value="150000">内蒙古自治区</option>  <option value="210000">辽宁省</option>  <option value="220000">吉林省</option>  <option value="230000">黑龙江省</option>  <option value="310000">上海市</option>  <option value="320000">江苏省</option>  <option value="330000">浙江省</option>  <option value="340000">安徽省</option>  <option value="350000">福建省</option>  <option value="360000">江西省</option>  <option value="370000">山东省</option>  <option value="410000">河南省</option>  <option value="420000">湖北省</option>  <option value="430000">湖南省</option>  <option value="440000">广东省</option>  <option value="450000">广西壮族自治区</option>  <option value="460000">海南省</option>  <option value="500000">重庆市</option>  <option value="510000">四川省</option>  <option value="520000">贵州省</option>  <option value="530000">云南省</option>  <option value="540000">西藏自治区</option>  <option value="610000">陕西省</option>  <option value="620000">甘肃省</option>  <option value="630000">青海省</option>  <option value="640000">宁夏回族自治区</option>  <option value="650000">新疆维吾尔自治区</option> </select> <div class="form-item-select-after"></div> </div> </div> <div class="module-form-row form-item-select"> <div class="module-form-item-wrapper no-icon small-item select-item city-wrapper"> <select name="city_code" class="city js-form-city js-verify" data-verify=":notNull"> <option value="0">请选择城市</option> </select> <div class="form-item-select-after"></div> </div> </div> <div class="module-form-row form-item-select"> <div class="module-form-item-wrapper no-icon small-item select-item district-wrapper"> <select name="district_code" class="district js-form-district js-verify" data-verify=":notNull"> <option value="0">请选择区县</option>  <option value="999999">其他</option>
+                                                    </select>
+                                                    <div class="form-item-select-after"></div>
+                                                    </div>
+                                                    </div>
+                                    </div>
+                                    <div class="module-form-row fn-clear">
+                                        <div class="module-form-item-wrapper no-icon small-item small-item-location">
+                                            <i>街道编号/名称，楼宇名称</i>
+                                            <input type="text" name="street" class="js-verify" value="" data-verify=":notNull/errorStr/strRange,{0-50}">
+                                                <div class="verify-error" style="display: block;opacity: 1;">必填</div>
+                                            </div>
+                                    </div>
+                                    <div class="module-form-row fn-clear">
+                                        <input type="checkbox" name="default" class="fn-hide" value="1" data-id="1"> <span class="blue-checkbox" data-checkbox-name="default"></span>  设为默认地址 </div>   </div> </div></div>  <div class="local-info"> <div class="stitle fn-clear"> <h5 class="fn-left">送货政策</h5> <a href="http://www.smartisan.com/#/delivery" class="fn-left get-more" target="_blank">了解更多</a> </div> <ul> <li>Smartisan T1、坚果手机及手机配件目前仅限在中国大陆地区购买。</li> <li>您订购的商品将通过顺丰速运配送，顺丰无法送达的地区将改用其他快递公司。</li> <li class="line">对于军事禁区，保税监管区或者其他任何政府监管区域，我们将无法提供运送服务。</li> <li>送货时间：星期一至星期日 上午 8:30 至下午 5:30</li> </ul> </div>  </div> </div>  </div> </div> <div class="fn-clear"> <div class="gray-box"> <div class="title"><h2>发票信息</h2></div> <div class="box-inner invoice-box"> <p class="invoice-detail"> 发票类型：电子发票 <a href="http://www.smartisan.com/support/#/instruction?anchor=electronicInvoice" target="_blank"> <img src="http://static.smartisanos.cn/store/asset/img/i.gif?1448530506866" class="invoice-tips"> </a> </p> <p class="invoice-detail">发票内容：购买商品明细</p> <p class="invoice-detail">发票抬头：个人</p> <p class="invoice-label"> 电子发票是税务局认可的有效收付款凭证，具有售后维权的法律效力，暂不支持企业报销。<br> 如需换取纸质发票请联系客服：400-619-0909 </p> </div> </div> </div> <div class="gray-box fn-clear"> <div class="title pre-title"> <h2>购物清单</h2> </div> <div class="box-inner order-cart banner-cart">  <div class="gray-sub-title cart-title"> <span class="name">商品名称</span> <span class="subtotal">小计</span> <span class="num">数量</span> <span class="price">单价</span> </div>  <div class="cart">  <div class="cart-items fn-clear  " data-id="100007305"> <div class="prod-info"> <div class="items-thumb">  <a href="#/jianguo" title="坚果手机（黄色，32GB）" target="_blank"> <img src="http://static.smartisanos.cn/store/asset/img/mobile/jianguo_80_yellow.png?1448530506866"> </a>  </div> <div class="items-params fn-clear"> <h6 class="name">  <a href="#/jianguo" title="坚果手机（黄色，32GB）" target="_blank">坚果手机（黄色，32GB）</a>  </h6>  <div class="subtotal">¥ 999.00</div>  <div class="num">  1 </div>  <div class="price">¥ 999.00</div>  </div> <div class="items-detail fn-clear"> <div class="detail">商品编号：100007305</div> </div> </div> </div>  </div> <div class="order-discount-line"> <p>商品总计：¥ 999.00</p>  <p>运费：+ ¥ 0.00</p>     </div> </div>  <div class="box-inner"> <div class="last-payment vouchers-wrapper fn-clear">   <span class="blue-main-btn big-main-btn payment-blue-bt js-checkout"> <a>提交订单</a> </span>  <span class="prices">应付金额： <em>¥ 999.00</em></span> </div> </div>  </div>  </div>
+
+<%- include foot.zt %>
+
+</body>
+</html>
